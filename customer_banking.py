@@ -3,6 +3,9 @@ from savings_account import create_savings_account
 from cd_account import create_cd_account
 
 def get_input_with_validation(message):
+    """Gets input and checks to see if it is a number, if it is then it returns
+    the input string. If not, it shows a message indicating that the input is
+    invalid."""
     isValid = False
     while not isValid:
         input_str = input(message)
@@ -11,7 +14,7 @@ def get_input_with_validation(message):
             isValid = True
         else:
             print("Please enter a decimal number with no special characters or letters.")
-    return float(input_str)
+    return input_str
 
 
 # Define the main function
